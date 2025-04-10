@@ -1,399 +1,727 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <title>Sethu Vignesh | MERN Stack Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Sethu vignesh</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <a href="#" class="logo">Sethu.V</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="#" class="nav-link close-menu" id="closeMenu"
+                ><i class="fas fa-times"></i
+              ></a>
+            </li>
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Sethu vignesh</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+          <div class="hero-greeting">
+            <div class="greeting-line"></div>
+            <span>Hello, I'm</span>
+          </div>
+          <h1 class="hero-name">Sethu Vignesh</h1>
+          <h2 class="hero-title">MERN Stack Developer</h2>
+          <p class="hero-description">
+            I create innovative web solutions that combine elegant design with
+            powerful functionality. With 2+ years of experience in building
+            modern web applications, I'm passionate about creating technology
+            that solves real problems.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Let's Talk</a>
+            <a href="./assets/Resume.pdf" class="btn btn-outline" download
+              >Download CV</a
+            >
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/sethuvignesh1/"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/sethuvicky"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:sethuvignesh009@gmail.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Sethu vignesh profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Sethu vignesh</h1>
-        <p class="section__text__p2">Mern stack Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/sethu-vignesh-756864308/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/sethuvicky'"
-          />
+        <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+          <div class="portrait">
+            <img src="./assets//bc.jpg" alt="Sethu Vignesh" />
+          </div>
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-      
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Mern stack Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <p class="section-subtitle" data-aos="fade-up">Get To Know More</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+          About Me
+        </h2>
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+            <h3>Crafting digital experiences with code</h3>
             <p>
-              Dedicated MERN Stack web developer with 2 years of proven experience. Proficient in
-              React JS, Node JS, Express JS, and MongoDB. Successfully delivered high- quality
-              solutions within tight timelines, combining technical expertise with creative problemsolving. Poised to contribute significantly to your company's success
+              I'm a passionate MERN Stack Developer with a strong focus on
+              creating efficient and scalable web applications. With 2+ years of
+              professional experience, I've developed a deep understanding of
+              MongoDB, Express.js, React.js, and Node.js.
+            </p>
+            <p>
+              My approach combines technical excellence with creative
+              problem-solving to build solutions that deliver real value. I
+              thrive in collaborative environments and enjoy turning complex
+              challenges into elegant, user-friendly applications.
+            </p>
+            <p>
+              When I'm not coding, I'm constantly exploring new technologies and
+              methodologies to enhance my skills and stay at the forefront of
+              web development.
             </p>
           </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Mern stack Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Redux</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Next js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+          <div class="about-stats" data-aos="fade-left" data-aos-delay="300">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="stat-title">Experience</h3>
+              <p class="stat-description">
+                2+ years of professional experience building web applications
+                with the MERN stack and related technologies.
+              </p>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Mern stack Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Mongo DB</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3 class="stat-title">Projects</h3>
+              <p class="stat-description">
+                Successfully delivered multiple production-ready applications
+                across different domains and industries.
+              </p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3 class="stat-title">Education</h3>
+              <p class="stat-description">
+                B.Sc. degree with strong fundamentals in computer science and
+                continuous self-learning.
+              </p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="stat-title">Approach</h3>
+              <p class="stat-description">
+                Focused on writing clean, maintainable code and building
+                intuitive user experiences.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
     </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 1"
-                class="project-img"
-                height="100px"
-              />
-            </div>
-            <h2  style="margin-top: 25%;"class="experience-sub-title project-title">Vetri matrimony</h2>
-            <div class="btn-container" >
-              <button
-                class="btn btn-color-2 project-btn"
-              >
-              Project 1
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://vetrimatrimony.com/'"
-              >
-                Live Demo
-              </button>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <p class="section-subtitle" data-aos="fade-up">
+          My Technical Expertise
+        </p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+          Technical Skills
+        </h2>
+        <div class="skills-content">
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+            <h3>Frontend Development</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>React.js</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-js"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>JavaScript</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Redux</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>HTML5</h4>
+                  <p>Expert</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>CSS3</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Next.js</h4>
+                  <p>Intermediate</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Bidchemz</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-              >
-                Project 2
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.bidchemz.com/'"
-              >
-                Live Demo
-              </button>
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+            <h3>Backend Development</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-node-js"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Node.js</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-server"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Express.js</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>MongoDB</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>API Development</h4>
+                  <p>Advanced</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-code-branch"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Git</h4>
+                  <p>Intermediate</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>AWS/Deployment</h4>
+                  <p>Intermediate</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <p class="section-subtitle" data-aos="fade-up">My Recent Work</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+          Featured Projects
+        </h2>
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <img src="./assets/project-2.png" alt="Vetri Matrimony" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Vetri Matrimony</h3>
+              <p class="project-description">
+                A comprehensive matrimony platform with advanced matching
+                algorithms, real-time chat, and secure user verification.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Socket.io</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://vetrimatrimony.com/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image">
+              <img src="./assets/project-1.png" alt="Bidchemz" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Bidchemz</h3>
+              <p class="project-description">
+                An e-commerce auction platform for chemical products with
+                real-time bidding, secure payments, and user dashboard.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Redux</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://www.bidchemz.com/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-image">
               <img
                 src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
+                alt="Hunch Ventures Portfolio Site"
               />
             </div>
-            <h2 class="experience-sub-title project-title">IWC NFT Marketplace</h2>
-
-            <div style="margin-top: 5%;" class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-              >
-                project 3
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://irishwhiskeycollectibles.com/'"
-              >
-                Live Demo
-              </button>
+            <div class="project-content">
+              <h3 class="project-title">Hunch Ventures Portfolio Site</h3>
+              <p class="project-description">
+                A modern portfolio-style website for Hunch Ventures, focused on
+                clean UI with advanced CSS techniques and optimized for SEO
+                using Next.js.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">SEO</span>
+                <span class="tech-tag">React</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://www.hunchventures.com/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
             </div>
-          
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-4.png"
-                alt="Project 3"
-                class="project-img"
-              />
+          <!-- Raiden Studio Project -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="project-image">
+              <img src="./assets/project-5.png" alt="Raiden Studio Website" />
             </div>
-            <h2 class="experience-sub-title project-title">Chronicle verse NFT</h2>
+            <div class="project-content">
+              <h3 class="project-title">Raiden Studio Website</h3>
+              <p class="project-description">
+                A high-performance, interactive portfolio website for Raiden
+                Studio. Built using modern frontend technologies to deliver
+                smooth animations, fast load times, and an engaging user
+                experience.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Framer Motion</span>
+                <span class="tech-tag">TypeScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://raiden.studio/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <div style="margin-top: 5%;" class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-              >
-                project 4
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='http://ec2-65-2-141-244.ap-south-1.compute.amazonaws.com/contact'"
-              >
-                Live Demo
-              </button>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-image">
+              <img src="./assets/project-4.png" alt="Chronicle Verse NFT" />
             </div>
-          
+            <div class="project-content">
+              <h3 class="project-title">Chronicle Verse NFT</h3>
+              <p class="project-description">
+                Digital marketplace for historical artifacts and documents as
+                NFTs, featuring authentication and provenance tracking.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Blockchain</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="http://ec2-65-2-141-244.ap-south-1.compute.amazonaws.com/contact"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">sethuvignesh009@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/sethu-vignesh-756864308/">LinkedIn</a></p>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <p class="section-subtitle" data-aos="fade-up">
+          My Professional Journey
+        </p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+          Work Experience
+        </h2>
+        <div class="timeline">
+          <!-- Raiden Studios -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-content">
+              <h3 class="timeline-role">MERN Stack Developer</h3>
+              <h4 class="timeline-company">Raiden Studios</h4>
+              <p class="timeline-description">
+                Led NFT marketplace projects and a portfolio website using
+                modern technologies like Web3, Next.js, and Framer Motion.
+              </p>
+              <ul class="timeline-responsibilities">
+                <li>
+                  Developed blockchain-powered NFT platforms using MERN stack
+                </li>
+                <li>
+                  Collaborated with Web3 developers for smart contract
+                  integration
+                </li>
+                <li>
+                  Built high-performance Next.js portfolio site for Raiden
+                  Studio
+                </li>
+                <li>Implemented Tailwind CSS and Framer Motion for UI/UX</li>
+              </ul>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <!-- Wascorp Digital -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="timeline-content">
+              <h3 class="timeline-role">MERN Stack Developer</h3>
+              <h4 class="timeline-company">Wascorp Digital</h4>
+              <p class="timeline-description">
+                Built dynamic web and e-commerce applications, improving UX and
+                functionality.
+              </p>
+              <ul class="timeline-responsibilities">
+                <li>
+                  Led development of Bidchemz B2B platform using Next.js and
+                  MongoDB
+                </li>
+                <li>
+                  Enhanced Hunch Ventures website with advanced CSS animations
+                </li>
+                <li>Integrated Redux Thunk for robust state management</li>
+                <li>Optimized frontend responsiveness and performance</li>
+              </ul>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <!-- iTianz IT Solution -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="timeline-content">
+              <h3 class="timeline-role">MERN Stack Developer</h3>
+              <h4 class="timeline-company">iTianz IT Solution</h4>
+              <p class="timeline-description">
+                Started my journey as a full-stack developer by building
+                functional interfaces and backend integrations.
+              </p>
+              <ul class="timeline-responsibilities">
+                <li>Developed responsive UI for Vetri Matrimony platform</li>
+                <li>
+                  Implemented user registration, search, and messaging features
+                </li>
+                <li>
+                  Ensured mobile responsiveness and cross-browser compatibility
+                </li>
+                <li>
+                  Worked across the full MERN stack for real-world applications
+                </li>
+              </ul>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+          Contact Me
+        </h2>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+            <h3>Let's Build Something Amazing Together</h3>
+            <p>
+              I'm always interested in hearing about new projects and
+              opportunities. Whether you have a question or just want to say hi,
+              I'll do my best to get back to you!
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <p>
+                    <a href="mailto:sethuvignesh009@gmail.com">
+                      sethuvignesh009@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>LinkedIn</h4>
+                  <p>
+                    <a
+                      href="https://www.linkedin.com/in/sethuvignesh1/"
+                      target="_blank"
+                    >
+                      linkedin.com/in/sethu-vignesh
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>GitHub</h4>
+                  <p>
+                    <a href="https://github.com/sethuvicky" target="_blank">
+                      github.com/sethuvicky
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form" data-aos="fade-left" data-aos-delay="300">
+            <form action="https://formspree.io/f/xzzeyvoy" method="POST">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="subject"
+                  class="form-control"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  class="form-control"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+      <div class="container">
+        <div class="footer-content">
+          <a href="#" class="footer-logo">Sethu Vignesh</a>
+          <nav class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="footer-social">
+            <a
+              href="https://www.linkedin.com/in/sethuvignesh1/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/sethuvicky" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:sethuvignesh009@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2024 Sethu vignesh. All Rights Reserved.</p>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sethu Vignesh. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // Initialize AOS (Animate On Scroll)
+      AOS.init({
+        duration: 800,
+        easing: "ease",
+        once: true,
+        offset: 100,
+      });
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const navLinks = document.getElementById("navLinks");
+      const closeMenu = document.getElementById("closeMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        navLinks.classList.add("active");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+
+      // Close mobile menu when clicking on menu links
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Header scroll effect
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+      // Form submission
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        alert("Thank you for your message! I will get back to you soon.");
+      });
+    </script>
   </body>
 </html>
